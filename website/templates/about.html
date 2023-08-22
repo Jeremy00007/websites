@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/estilos3.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+  <style>
+    /* Estilos básicos para el menú de navegación */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative;
+    }
+  
+    nav .dropdown-item {
+      display: none;
+      position: absolute;
+      background-color: transparent;
+      border: transparent;
+      padding: 10px;
+      z-index: 1;
+    }
+  
+    nav li:hover .dropdown-item {
+      display: block;
+    }</style>
+    <header>
+        <div class="container__header">	
+          <div class="logo">
+              <img src="{% static '/img/logo.png'%}" alt="">
+          </div>
+          <div class="menu">
+              <nav>
+                  <ul>
+                      <li><a href="/about">Nosotros</a></li>
+                      <li><a href="/blog/">Blog</a>
+                        <div><a class="dropdown-item" href="/cursos/">Cursos</a></div>
+                      </li>
+                      <li><a href="/contact/">Contactanos</a></li>
+                      <li><a href="/">Inicio</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <i class="fa-solid fa-bars" id="icon_menu"></i>
+
+
+          {% comment %} <div class="header__register">
+            <input type="button" class="btn__header-register" value="Registrarse" id="registerButton">
+          </div> {% endcomment %}
+    
+          <script>
+
+              var registerButton = document.getElementById("registerButton");
+              
+
+              registerButton.addEventListener("click", function() {
+
+                  window.location.href = "/login/";
+              });
+          </script>
+        </div>
+    </header>
+
+    <body>
+        <div class="spacer"> </div>
+          <div class="container">
+
+            <section class="about">
+
+                <div class="about-text">
+                  <h2>Nosotros</h2>
+                  <p>¡Bienvenidos a DSI Guardians! Somos un grupo apasionado de estudiantes de la carrera de Desarrollo y Seguridad Informática (DSI) que estamos comprometidos con la misión de empoderar a los jóvenes para que naveguen de manera segura en el vasto mundo digital. Conscientes de los riesgos y desafíos que enfrentamos en línea, nos hemos unido para difundir el conocimiento y la conciencia sobre la importancia de la ciberseguridad y el uso responsable de la inteligencia artificial.</p>
+                </div>
+                <div class="about-img">
+                  <img src="{%static '/img/ciberdelicuentes6.jpg'%}" style="height: 450px; width:350px">
+                </div>
+              
+              </section>
+              <section class="values">
+
+                <div class="value-card">
+                  <img src="{%static '/img/nuestra_mision.png'%}">
+                  <h3>Nuestra Mision</h3>
+                  <p>En un mundo cada vez más conectado, la seguridad digital se ha convertido en una prioridad. Nuestra misión es educar y concienciar a los jóvenes sobre los peligros que acechan en línea, incluidas las amenazas de ciberseguridad y el uso inadecuado de la inteligencia artificial. Queremos brindarte las herramientas necesarias para que puedas navegar, comunicarte y explorar la red de manera segura y responsable.</p>
+                </div>
+              
+              </section>
+              <section class="team">
+
+                <div class="team-card">
+                  <img src="{%static '/img/loqueofrecemos.png'%}">
+                  <h4>Lo que ofrecemos</h4>
+                  <p><b>Talleres Educativos: </b>Organizamos talleres interactivos y sesiones de capacitación donde compartimos conocimientos prácticos sobre ciberseguridad. Aprenderás a reconocer estafas en línea, proteger tus datos personales y mantener tus dispositivos seguros.</p>
+                  <br>
+                  <p><b>Consejos Prácticos: </b>Proporcionamos consejos útiles y trucos para protegerte de las amenazas cibernéticas más comunes. Desde contraseñas seguras hasta consejos para evitar la suplantación de identidad, te ayudamos a estar un paso adelante en el juego de la seguridad digital.</p>
+                  <br>
+                  <p><b>Uso Responsable de la IA: </b>La inteligencia artificial está transformando nuestro mundo, pero también plantea desafíos éticos. Te guiaremos para que entiendas cómo se utiliza la IA en línea y cómo tomar decisiones informadas sobre su uso.</p>
+                  <br>
+                  <p><b>Recursos Actualizados: </b>Mantenemos actualizados nuestros recursos y materiales para que siempre tengas acceso a la información más relevante y actualizada sobre ciberseguridad y tecnología.</p>
+        
+                </div>
+              
+              </section>
+
+              <section class="values">
+
+                <div class="value-card">
+                  <img src="{%static '/img/Nuestro-Compromiso.png'%}">
+                  <h3>Nuestro Compromiso</h3>
+                  <p>Nuestra pasión por la seguridad digital y la responsabilidad en línea nos impulsa a brindarte el conocimiento necesario para que te conviertas en un defensor de tu propio camino digital. Creemos en la importancia de la educación continua y en la capacidad de cada individuo para tomar decisiones informadas y seguras en línea.
+
+                    Únete a nosotros en este viaje para crear un entorno en línea más seguro y protegido. Juntos, podemos navegar por el mundo digital con confianza y conocimiento. ¡Mantente conectado, mantente seguro!</p>
+                </div>
+              
+              </section>
+          
+          </div>
+    </body>
+
+    <footer>
+        <div class="container__footer">
+            <div class="column">
+              <div class="social-icons">
+                <h2>Nuestras Redes Sociales</h2>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook">  Facebook</i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram">  Instagram</i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter">  Twitter</i></a>
+                <div class="email-subscribe">
+                  <input type="email" placeholder="Ingresa tu email para poder darte mas información">
+                  <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+              </div>
+            </div>
+          <div class="column">
+            <div class="contact-info">
+                <p>Email: contacto@example.com</p>
+                <p>Teléfono: +1 234 567 890</p>
+                <p>AV.Prado Ub.Los Nogales N° 365</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="additional-info">
+                <p> “Si crees que la tecnología puede solventar tus problemas de seguridad, entonces no entiendes los problemas y no entiendes de tecnología”. </p>
+            </div>
+          </div>
+        </div>
+    </footer>
+</body>
+</html> 

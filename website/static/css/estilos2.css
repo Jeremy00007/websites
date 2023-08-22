@@ -1,0 +1,219 @@
+body{
+  background: #ccb07488;
+}
+main {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.form-group{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.social-icon i {
+    font-size: 30px; /* Ajusta el tamaño según tus preferencias */
+    color: white;
+}
+
+header {
+    height: 100px;
+  }
+  
+  .container__header {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: 150px;
+  }
+  
+  .menu nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .menu nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+  }
+  
+  .menu nav ul li a {
+    font-size: 16px;
+    font-weight:bold;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .menu nav ul li a:hover {
+    opacity: 0.6;
+  }
+  
+  .btn__header-register,
+  .btn__register-cover {
+    padding: 14px 50px;
+    border: none;
+    background: rgb(244, 146, 52);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+  }
+  
+  .btn__header-register:hover,
+  .btn__register-cover:hover {
+    background: rgb(159, 95, 31);
+    color: #000;
+  }
+  
+  #icon_menu {
+    display: none;
+    color: white;
+  }
+
+  footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    max-width: 1200px; /* Establecemos un ancho máximo */
+    margin: 0 auto; /* Centramos el footer en la página */
+  }
+  
+  .container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 300px; /* Asegurar que cada columna tenga un ancho mínimo */
+  }
+
+  .col-md-6 h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  .col-md-6 p{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-direction: column; /* Mostrar los iconos de redes sociales en columna */
+  }
+  
+  .social-icons a {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px; /* Espacio entre los íconos */
+    text-align: left;
+    
+  }
+
+
+  .social-icons h2 {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 4%;
+  }
+  
+  .contact-info p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .additional-info p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilos para los íconos de redes sociales */
+  .social-icons a:hover {
+    color: rgb(250, 188, 61);
+  }
+
+  
+
+  /* Estilos adicionales para el footer */
+  footer {
+    border-top: 2px solid #ccc;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    margin-top: 100px;
+  }
+  
+  /* Ajustes para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .container__footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+      flex-direction: row; /* Mostrar los iconos de redes sociales en fila */
+    }
+  
+    .social-icons a {
+      margin: 0 5px; /* Espacio entre los íconos horizontales */
+    }
+
+    
+  }
+  
+
+  .email-subscribe {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .email-subscribe input {
+    font-size: 14px;
+    padding: 8px;
+    
+   
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .email-subscribe button {
+  background: rgb(244, 146, 52);
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+  }

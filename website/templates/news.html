@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ noticia_seleccionada.titulo }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    article {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    pre {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  {% if noticia_seleccionada.imagen %}
+    <img src="{{ noticia_seleccionada.imagen }}"> 
+  {% endif %}
+</header>
+
+<main>
+
+  <h1>{{ noticia_seleccionada.titulo }}</h1>
+
+  {% if noticia_seleccionada.descripcion %}
+    <article>
+      <p>{{ noticia_seleccionada.descripcion }}</p>
+    </article>
+  {% endif %}
+
+  <div>
+    <pre>{{ news_content }}</pre>
+  </div>
+
+</main>
+
+</body>
+</html>

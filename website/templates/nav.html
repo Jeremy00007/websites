@@ -1,0 +1,298 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nav</title>
+  <link rel="shortcut icon" href="logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{%static '/css/estilos.css'%}">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <style>
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  
+    nav li {
+      margin-right: 20px;
+      position: relative;
+    }
+  
+    nav .dropdown-item {
+      display: none;
+      position: absolute;
+      background-color: transparent;
+      border: transparent;
+      padding: 10px;
+      z-index: 1;
+    }
+  
+    nav li:hover .dropdown-item {
+      display: block;
+    }
+    main {
+      max-width: 1200px;
+      height: calc(100vh + 800px);
+      padding: 40px;
+      margin: auto;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 40px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      color: #777;
+    }
+
+    .card-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+    <header>
+        <div class="container__header">	
+          <div class="logo">
+            <img src="{% static '/img/logo.png'%}" alt="">
+          </div>
+          <div class="menu">
+            <nav class="navbar navbar-expand-lg">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">Nosotros</a></li>
+                    <li class="nav-item dropdown">
+                      <li><a href="/blog/">Blog</a>
+                        <div><a class="dropdown-item" href="/cursos/">Cursos</a></div>
+                      </li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contactanos</a></li>
+                </ul>
+            </nav>
+        </div>
+          <i class="fa-solid fa-bars" id="icon_menu"></i>
+          {% comment %} <div class="header__register">
+            <input type="button" class="btn__header-register" value="Registrarse">
+          </div> {% endcomment %}
+        </div>
+    </header>    
+
+    <main> {% block content %}
+      <div class="container mt-5">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="card mb-4">
+                      <img src="https://i.ytimg.com/vi/C7NLf7K7hLA/maxresdefault.jpg" class="card-img-top" alt="Card Image 1">
+                      <div class="card-body">
+                          <h5 class="card-title">Curso Gratis de Programación Básica</h5>
+                          <p class="card-text">Programa desde cero, domina Javascript, entiende HTML y aprende de algoritmos. Sí, desde cero. Entenderás la lógica del código, cómo piensan las programadoras expertas y cómo programar un videojuego web de principio a fin. Aprender a programar no es fácil, pero Platzi lo hace efectivo.</p>
+                          <a href="https://platzi.com/cursos/programacion-basica/" class="card-button">Ver más</a>
+                        </div>
+                      
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card mb-4">
+                      <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4494/800_imagen.jpg" class="card-img-top" alt="Card Image 2">
+                      <div class="card-body">
+                          <h5 class="card-title">Curso de Python</h5>
+                          <p class="card-text">En este curso de Python aprenderás de forma práctica los conceptos básicos, las mejores técnicas, así como las librerías más populares y herramientas necesarias para programar de forma eficiente con este lenguaje de programación.</p>
+                          <a href="https://edutin.com/curso-de-python" class="card-button">Ver más</a>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4495/800_imagen.jpg" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de PHP</h5>
+                        <p class="card-text">En este curso de PHP aprenderás de forma práctica los conceptos básicos, las mejores técnicas, así como las librerías más populares y herramientas necesarias para programar de forma eficiente con este lenguaje de programación. </p>
+                        <a href="https://edutin.com/curso-de-php" class="card-button">Ver más</a>
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4284/card_imagen.jpg" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de Javascript                        </h5>
+                        <p class="card-text">En este curso de aprenderás JavaScript aprenderás a utilizar las funciones y las herramientas de este lenguaje de programación, para llevar a cabo la elaboración de características interactivas en un sitio web. </p>
+                        <a href="https://edutin.com/curso-de-javascript-4284" class="card-button">Ver más</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="card mb-4">
+                  <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/3995/800_imagen.jpg" class="card-img-top" alt="Card Image 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Curso de diseño gráfico                      </h5>
+                      <p class="card-text">En este curso de diseño gráfico aprenderás los fundamentos del dibujo y sus aplicaciones en el diseño digital, para llevar a cabo la proyección de comunicaciones visuales dirigidos a la transmisión de mensajes específicos a grupos sociales. </p>
+                      <a href="https://edutin.com/curso-de-diseno-grafico-3995" class="card-button">Ver más</a>
+                    </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card mb-4">
+                  <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4500/card_imagen.jpg" class="card-img-top" alt="Card Image 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Curso de dibujo digital                      </h5>
+                      <p class="card-text">En este curso de dibujo digital aprenderás a llevar a cabo la elaboración de un diseño, por medio del uso de la herramienta Adobe Illustrator. Es fácil de aprender y solo se requiere tener conocimientos elementales. </p>
+                      <a href="https://edutin.com/curso-de-dibujo-digital" class="card-button">Ver más</a>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/3741/card_imagen.jpg" class="card-img-top" alt="Card Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Curso de Adobe Animate
+                    </h5>
+                    <p class="card-text">En este curso de Adobe Animate aprenderás acerca de la animación, sus fundamentos y características principales, para que por medio del programa Adobe Animate puedas crear storyboards, storytellings y animaciones teniendo en cuenta la creatividad, los contenidos del curso y el funcionamiento del programa.</p>
+                    <a href="https://edutin.com/curso-de-adobe-animate" class="card-button">Ver más</a>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4344/800_imagen.jpg" class="card-img-top" alt="Card Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Curso de publicidad                    </h5>
+                    <p class="card-text">En este curso de publicidad aprenderás una serie de estrategias y técnicas para llevar a cabo la comercialización de ciertos productos o servicios. Es fácil de aprender y solo se requiere tener conocimientos elementales. </p>
+                    <a href="https://edutin.com/curso-de-publicidad-4344" class="card-button">Ver más</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card mb-4">
+              <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4286/800_imagen.jpg" class="card-img-top" alt="Card Image 1">
+              <div class="card-body">
+                  <h5 class="card-title">Curso de seguridad informática
+                  </h5>
+                  <p class="card-text">En este curso de seguridad informática aprenderás aplicar la configuración y programación de redes, navegadores y utilizar las herramientas de CMD, bajo la finalidad de aprender a prevenir ataques informáticos y cuidar de manera efectiva la información de carácter privada. </p>
+                  <a href="https://edutin.com/curso-de-seguridad-informatica-4286" class="card-button">Ver más</a>
+                </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="card mb-4">
+              <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4275/800_imagen.jpg" class="card-img-top" alt="Card Image 2">
+              <div class="card-body">
+                  <h5 class="card-title">Curso de Tester de Software                  </h5>
+                  <p class="card-text">En este curso de Tester de Software aprenderás aplicar las distintas maneras como se puede colocar a prueba el funcionamiento de distintos programas. Es fácil de aprender y solo se requiere tener conocimientos elementales en programación.</p>
+                  <a href="https://edutin.com/curso-de-tester-4275" class="card-button">Ver más</a>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card mb-4">
+              <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4308/800_imagen.jpg" class="card-img-top" alt="Card Image 1">
+              <div class="card-body">
+                  <h5 class="card-title">Curso de reparación de celulares
+                  </h5>
+                  <p class="card-text">En este curso de reparación de celulares aprenderás a utilizar las herramientas de un equipo móvil, para mantener o reparar su funcionamiento armónico, mediante la identificación de sus fallos y los métodos que permiten sobrellevarlos. Es fácil de aprender y solo se requiere tener conocimientos elementales.</p>
+                  <a href="https://edutin.com/curso-de-reparacion-de-celulares-4308" class="card-button">Ver más</a>
+                </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="card mb-4">
+              <img src="https://d3puay5pkxu9s4.cloudfront.net/curso/4258/card_imagen.jpg" class="card-img-top" alt="Card Image 2">
+              <div class="card-body">
+                  <h5 class="card-title">Curso de mantenimiento de computadoras</h5>
+                  <p class="card-text">En este curso de mantenimiento de computadoras o comptuación aprenderás  los conceptos básicos de Informática y sistematización, haciendo un reconocimiento de las partes de los PCs, Portátiles, tales como tarjetas, boards, procesadores, memorias, discos duros, periféricos, etc. Es fácil de aprender y solo se requiere tener conocimientos elementales.</p>
+                  <a href="https://edutin.com/curso-de-mantenimiento-de-computadoras-4258" class="card-button">Ver más</a>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+      {% endblock %}</main>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <footer>
+        <div style="clear:both;"></div>
+        <div class="container__footer">
+          <div class="column">
+            <div class="social-icons">
+              <h2>Nuestras Redes Sociales</h2>
+              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook">  Facebook</i></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram">  Instagram</i></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter">  Twitter</i></a>
+              <div class="email-subscribe">
+                <input type="email" placeholder="Ingresa tu email para poder darte mas información">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="contact-info">
+              <p>Email: contacto@example.com</p>
+              <p>Teléfono: +51 987 654 321</p>
+              <p>AV.Prado Ub.Los Nogales N° 365</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="additional-info">
+              <p> “Si crees que la tecnología puede solventar tus problemas de seguridad, entonces no entiendes los problemas y no entiendes de tecnología”.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
